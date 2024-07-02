@@ -1,267 +1,213 @@
-html {
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
     background-color: rgb(158, 161, 153);
+    text-align: center;
+    color: rgb(231, 223, 223);
 }
 
 h1, p, li{
-    color: rgb(231, 223, 223);
+    letter-spacing: 1.2px;
+    opacity: .9;
 }
 h1{
-    text-align: center;
+    padding-top: 2em;
 }
-section, .container{
-    margin: auto;
-    text-align: center;
+p, li{
+    padding-top: 1em;
+    font-size: 25px;
+} 
+section{
+    display: flex;
+    justify-content: center;
+
+    padding-top: 2em;
 }
 .container{
     background-color: rgba(20, 22, 22, 0.575);
     border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    width: 35em;
-    height: 90vh;
+    text-align: center;
+    /* padding: 2em; */
+    position: relative;
+    /* width: 45vw; */
+    height: 75vh;
 }
+.container .bg{
+    background-image: url(img/savio.jpg);
+    background-size: cover;
 
-ul {
-    list-style:lower-greek ;
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0; 
+    left: 0;
+    /* background: #000; */
+    opacity: 0.3;
+}
+.container ul{
+    padding-top: 25px;
+    
+    list-style: none ;
     text-align: start;
 }
-
+.btn{
+    padding-top: 2em;
+}
 #sortear{
-    background-color: rgba(64, 119, 28, 0.719);
+    background-color: blueviolet;
     color: aliceblue;
     border: none;
     border-radius: 10px;
-    padding: 8px;
-    box-sizing: border-box;
+    padding: 15px;
     cursor: pointer;
+    opacity: .9;
+}
+#sortear:hover{
+    color: red;
+    letter-spacing: 2px;
+    transition: all .6s;
+    font-weight: bold;
 }
 
-#res{
-    color: rgba(32, 150, 16, 0.76);
+.res{
+    color: rgba(229, 232, 228, 0.76);
     padding-top: 1.25rem;
     text-transform: uppercase;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
+    opacity: .9;
 }
 
-@media screen and (min-width: 25.875em){
-    h1{
-        color: rgb(32, 224, 64);
-        text-align: center;
-    }
-    .container{
+@media  (max-width: 320px) {
+    section{
+        width: 85vw;
         margin: auto;
-        background-image: url(img/sabio.jpg);
-        background-size: 85vw;
-        background-repeat: repeat;
-        /* filter: url(img/sabio.jpg); */
-        /* filter:opacity(55%); */
-        text-align: center;
-        width: 75vw;
-        height: 50vh;
-        box-shadow: 3px 3px 10px rgba(41, 151, 56, 0.788);
-    }
-    .container p, li{
-        color: rgba(35, 143, 25, 0.945);
-        letter-spacing: 2px;
-    }
-    #sortear{
-        padding-top: 0;
-        padding: 0.313em;
-        color: aliceblue;
-    }
-}
-
-@media screen and (min-width: 24.375em){
-    h1{
-        color: rgb(32, 224, 64);
-        text-align: center;
+        padding-top: 1em;
     }
     .container{
+        position: relative;
+    }
+    .container li{
+        padding-left: 5px;
+    }
+    .container .bg{
+        background-image: url(img/savio.jpg);
+        background-size: cover;
+        border-radius: 15px;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0; 
+        left: 0;
+        /* background: #000; */
+        opacity: 0.4;
+    }
+
+    .container p, li, .res{
+        opacity: .9;
+        font-size: 20px;
+    }
+    .container .res{
+        font-size: .7em;
+    }
+    .container #sortear{
+        opacity: .9;
+        background-color: blueviolet;
+
+    }
+    h1{
+        padding-top: 2em;
+    }
+}
+@media (min-width: 321px) and  (max-width: 450px){
+    section{
+        width: 85vw;
         height: 70vh;
-        width: 90vw;
         margin: auto;
-        background-image: url(img/sabio.jpg);
-        background-size: 90vw;
-        box-shadow: 3px 3px 10px rgba(41, 151, 56, 0.788);
+        padding-top: 1em;
     }
-    .container p, li{
-        color: rgba(35, 143, 25, 0.945);
-        letter-spacing: 2px;
-        font-size: 1.5em;
+    .container{
+        position: relative;
+    
     }
-    #sortear{
-        padding-top: 0;
-        padding: 0.7em;
-        color: aliceblue;
+    .container .bg{
+        background-image: url(img/savio.jpg);
+        background-size: cover;
+        border-radius: 15px;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0; 
+        left: 0;
+        /* background: #000; */
+        opacity: 0.4;
+    }
+
+    .container p, li, .res{
+        opacity: .9;
+        color: #f7f7f7;
+        padding-top: 1em;
+        font-size: 1em;
+    }
+    .container .res{
+        padding-top: 3em;
+        font-size: .9em;
+    }
+    .container #sortear{
+        opacity: .9;
+        background-color: blueviolet;
+
+    }
+    h1{
+        padding-top: 2em;
     }
 }
 
-@media screen and (min-width: 22.5em){
-    h1{
-        color: rgb(32, 224, 64);
-        text-align: center;
+@media (min-width: 450px) and  (max-width: 800px ){
+    section{
+        width: 80vw;
+        height: 85vh;
+        margin: auto;
+        padding-top: 1em;
     }
     .container{
-        height: 73vh;
-        width: 92vw;
-        margin: auto;
-        background-image: url(img/sabio.jpg);
-        background-size: 85vw;
-        box-shadow: 3px 3px 10px rgba(41, 151, 56, 0.788);
+        position: relative;
+    
     }
-    .container p, li{
-        color: rgba(35, 143, 25, 0.945);
-        letter-spacing: 2px;
-        font-size: 1.34em;
+    .container .bg{
+        background-image: url(img/savio.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 15px;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0; 
+        left: 0;
+        /* background: #000; */
+        opacity: 0.4;
     }
-    #sortear{
-        padding-top: 0;
-        padding: 0.9em;
-        color: aliceblue;
+
+    .container p, li, .res{
+        opacity: .9;
+        color: #f7f7f7;
+        padding-top: 1em;
+        font-size: 1.3em;
     }
-}
-@media screen and (min-width: 25.75em){
+    .container .res{
+        padding-top: 3em;
+        font-size: .9em;
+    }
+    .container #sortear{
+        opacity: .9;
+        background-color: blueviolet;
+
+    }
     h1{
-        color: rgb(32, 224, 64);
-        text-align: center;
-    }
-    .container{
-        height: 68vh;
-        width: 92vw;
-        margin: auto;
-        background-image: url(img/sabio.jpg);
-        background-size: 85vw;
-        box-shadow: 3px 3px 10px rgba(41, 151, 56, 0.788);
-    }
-    .container p, li{
-        color: rgba(35, 143, 25, 0.945);
-        letter-spacing: 2px;
-        font-size: 1.58em;
-    }
-    #sortear{
-        padding-top: 0;
-        padding: 0.9em;
-        color: aliceblue;
-    }
-}
-@media screen and (min-width: 31.25em){
-    h1{
-        color: rgb(32, 224, 64);
-        text-align: center;
-    }
-    .container{
-        height: 100vh;
-        width: 92vw;
-        margin: auto;
-        background-image: url(img/sabio.jpg);
-        background-size: 85vw;
-        box-shadow: 3px 3px 10px rgba(41, 151, 56, 0.788);
-    }
-    .container p, li{
-        color: rgba(35, 143, 25, 0.945);
-        letter-spacing: 2px;
-        font-size: 1.75em;
-    }
-    #sortear{
-        padding-top: 0;
-        padding: 1em;
-        color: aliceblue;
-    }
-}
-@media screen and (min-width: 56.25em){
-    h1{
-        color: rgb(32, 224, 64);
-        text-align: center;
-    }
-    .container{
-        height: 9vh;
-        width: 55vw;
-        margin: auto;
-        background-image: url(img/sabio.jpg);
-        background-size: 50vw;
-        box-shadow: 3px 3px 10px rgba(41, 151, 56, 0.788);
-    }
-    .container p, li{
-        color: rgba(35, 143, 25, 0.945);
-        letter-spacing: 2px;
-        font-size: 1.75em;
-    }
-    #sortear{
-        padding-top: 0;
-        padding: 1em;
-        color: aliceblue;
-    }
-}
-@media screen and (min-width: 50em){
-    h1{
-        color: rgb(32, 224, 64);
-        text-align: center;
-    }
-    .container{
-        height: 90vh;
-        width: 48vw;
-        margin: auto;
-        background-image: url(img/sabio.jpg);
-        background-size: 47vw;
-        box-shadow: 3px 3px 10px rgba(41, 151, 56, 0.788);
-    }
-    .container p, li{
-        color: rgba(35, 143, 25, 0.945);
-        letter-spacing: 2px;
-        font-size: 1.6em;
-    }
-    #sortear{
-        padding-top: 0;
-        padding: 1em;
-        color: aliceblue;
-    }
-}
-/* @media screen and (min-width: 85.375em){
-    h1{
-        color: rgb(32, 224, 64);
-        text-align: center;
-    }
-    .container{
-        height: 100vh;
-        width: 50vw;
-        margin: auto;
-        background-image: url(img/sabio.jpg);
-        background-size: 30vw;
-        box-shadow: 3px 3px 10px rgba(41, 151, 56, 0.788);
-    }
-    .container p, li{
-        color: rgba(35, 143, 25, 0.945);
-        letter-spacing: 2px;
-        font-size: 1.8em;
-    }
-    #sortear{
-        padding-top: 0;
-        padding: 1em;
-        color: aliceblue;
-    }
-} */
-@media screen and (min-width: 43.75em){
-    h1{
-        color: rgb(32, 224, 64);
-        text-align: center;
-    }
-    .container{
-        height: 80vh;
-        width: 50vw;
-        margin: auto;
-        background-image: url(img/sabio.jpg);
-        background-size: 48vw;
-        box-shadow: 3px 3px 10px rgba(41, 151, 56, 0.788);
-    }
-    .container p, li{
-        color: rgba(35, 143, 25, 0.945);
-        letter-spacing: 2px;
-        font-size: 1.2em;
-    }
-    #sortear{
-        padding-top: 0;
-        padding: 1em;
-        color: aliceblue;
+        padding-top: 2em;
     }
 }
